@@ -1,4 +1,4 @@
-
+ 
 $(document).ready(function(){
 	
 	/*--- Display information modal box ---*/
@@ -12,6 +12,13 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
+  	$("#new").click(function(){
+  		newGame();
+  	})
+
 });
 
 
+function newGame() {
+	
+}
