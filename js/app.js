@@ -21,10 +21,15 @@ $(document).ready(function(){
 
   	$("form").submit(function(event){
   		var guess = $("input:first").val()
-  		feedback(checkGuess(guess));
-  		$("#count").text(guessCount);
-  		$("#guessList").append("<li>"+guess+"</li>");
-  		event.preventDefault();
+  		if (guess <= 100 && guess > 0) {
+  			feedback(checkGuess(guess));
+  			$("#count").text(guessCount);
+  			$("#guessList").append("<li>"+guess+"</li>");
+  			event.preventDefault();
+  		} else {
+  			feedback("Please enter a number between 1 and 100");
+  		}
+  		
  	});
 
  	newGame();
