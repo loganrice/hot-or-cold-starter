@@ -22,6 +22,7 @@ $(document).ready(function(){
   	$("form").submit(function(event){
   		var guess = $("input:first").val()
   		checkGuess(guess);
+  		$("#count").text(guessCount);
   		event.preventDefault();
  	});
 
