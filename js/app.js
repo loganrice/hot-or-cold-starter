@@ -20,5 +20,10 @@ $(document).ready(function(){
 
 
 function newGame() {
+	var answer = randomNumber();
 	
+}
+
+function randomNumber(){
+	return Math.floor((Math.random() * 100) +1)
 }
