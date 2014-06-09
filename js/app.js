@@ -24,6 +24,8 @@ $(document).ready(function(){
   		checkGuess(guess);
   		event.preventDefault();
  	});
+
+ 	newGame();
 });
 
 
