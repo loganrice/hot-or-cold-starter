@@ -1,4 +1,5 @@
- var answer;
+ var answer,
+ 	guessCount = 0;
 
 
 $(document).ready(function(){
@@ -35,6 +36,7 @@ function randomNumber(){
 }
 
 function checkGuess(guess){
+	guessCount++;
 	var difference = guess - answer;
 	if (difference < 50){
 		hot();
