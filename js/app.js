@@ -23,6 +23,7 @@ $(document).ready(function(){
   		var guess = $("input:first").val()
   		checkGuess(guess);
   		$("#count").text(guessCount);
+  		$("#guessList").append("<li>"+guess+"</li>");
   		event.preventDefault();
  	});
 
