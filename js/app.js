@@ -42,6 +42,7 @@ function clearUserGuess(){
 
 function clearGuessHistory(){
 	$('#guessList').empty();
+	$("#count").text("0");
 }
 
 function newGame() {
