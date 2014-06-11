@@ -20,7 +20,8 @@ $(document).ready(function(){
   	})
 
   	$("form").submit(function(event){
-  		var guess = $("input:first").val()
+  		var guess = $("input:first").val();
+  		clearUserGuess();
   		if (guess <= 100 && guess > 0) {
   			feedback(checkGuess(guess));
   			$("#count").text(guessCount);
@@ -35,9 +36,18 @@ $(document).ready(function(){
  	newGame();
 });
 
+function clearUserGuess(){
+	$("#userGuess:text").val('');
+}
+
+function clearGuessHistory(){
+	$('#guessList').empty();
+}
 
 function newGame() {
 	answer = randomNumber();
+	clearUserGuess();
+	clearGuessHistory();
 }
 
 function randomNumber(){
